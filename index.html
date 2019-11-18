@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>UTM WEBSITE</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+<script src="jquery.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script>
+<link rel="stylesheet" href="leaflet.css">
+<script src="leaflet.js"></script>
+
+<script src="cordova.js"></script>
+<link href="js/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="demo.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit.almost-flat.min.css'>
+<link rel="stylesheet" href="style.css">
+
+<script src="jquery.min.js"></script> 
+<script src="jquery.easy-ticker.js"></script> 
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript" src="jquery.easing.min.js"></script>
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+<link rel="stylesheet" type="text/css" href="http://stephband.info/css/template.min.css" />
+<link rel="stylesheet" type="text/css" href="http://stephband.info/css/template.theme.min.css" />
+	
+<link rel="stylesheet" type="text/css" href="http://stephband.github.com/css/site.layout.css" />
+<link rel="stylesheet" type="text/css" href="http://stephband.github.com/css/docs.classes.css" />
+<link rel="stylesheet" type="text/css" href="http://stephband.github.com/css/site.highlight.light.css" />
+
+<link rel="stylesheet" type="text/css" href="jquery.convform.css">
+
+
+
+<style>
+
+.wrapper {
+	width:960px;
+	margin:150px auto;
+}
+.demof {
+border: 1px solid #ccc;
+margin: 25px 0;
+}
+.demof ul {
+padding: 0;
+list-style: none;
+}
+.demof li {
+padding: 20px;
+border-bottom: 1px dashed #ccc;
+}
+.demof li.odd {
+background: #fafafa;
+}
+.demof li:after {
+content: '';
+display: block;
+clear: both;
+}
+.demof img {
+float: left;
+width: 177px;
+margin: 5px 15px 0 0;
+}
+.demof a {
+font-family: Arial, sans-serif;
+font-size: 20px;
+font-weight: bold;
+color: #06f;
+}
+.demof p {
+margin: 15px 0 0;
+font-size: 14px;
+}
+.demo3 {
+font-family: Arial, sans-serif;
+border: 1px solid #C20;
+margin: 50px 0;
+font-style: italic;
+position: relative;
+padding: 0 0 0 80px;
+box-shadow: 0 2px 5px -3px #000;
+border-radius: 3px;
+}
+.demo3:before {
+content: "Latest News";
+display: inline-block;
+font-style: normal;
+background: #C20;
+padding: 10px;
+color: #FFF;
+font-weight: bold;
+position: absolute;
+top: 0;
+left: 0;
+}
+.demo3:after {
+content: '';
+display: block;
+top: 0;
+left: 80px;
+background: linear-gradient(#FFF, rgba(255, 255, 255, 0));
+height: 20px;
+}
+.demo3 ul li {
+list-style: none;
+padding: 10px 0;
+}
+.demo5 {
+border: 2px solid #FF3333;
+margin-top: 10px;
+border-radius: 10px;
+width: 500px;
+-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+.demo5 ul {
+padding: 0;
+}
+.demo5 ul li {
+padding: 10px 10px 10px 10px;
+border-bottom: 1px solid #FF3333;
+border-radius: 10px;
+list-type: none;
+margin: 0;
+}
+.et-run {
+background-color: #0cf;
+color: white;
+border: 1px solid black;
+}
+
+
+.site_wrap > .slides_wrap {
+			margin-bottom: 1em;
+			margin-left: -8px;
+			margin-right: -8px;
+		}
+
+		.img_slides_wrap {
+			width: 784px;
+			border: 8px solid #333333;
+			background-color: #444444;
+			overflow: hidden;
+		}
+
+		.img_slide {
+			padding: 0;
+		}
+
+		.js .img_slide {
+			/* Overide template's height transitions. */
+			width: 100%;
+			height: auto;
+		}
+
+		.slide_buttons_index {
+			text-align: center;
+		}
+
+		.notransition,
+		.notransition .slide {
+			-webkit-transition-duration: 0 !important;
+			   -moz-transition-duration: 0 !important;
+			    -ms-transition-duration: 0 !important;
+			        transition-duration: 0 !important;
+		
+			-webkit-transition-delay: 0 !important;
+			   -moz-transition-delay: 0 !important;
+			    -ms-transition-delay: 0 !important;
+			        transition-delay: 0 !important;
+		}
+
+		@media screen and (max-width: 640px) {
+			.img_slides_wrap {
+				width: 100%;
+
+				-webkit-box-sizing: content-box;
+				   -moz-box-sizing: content-box;
+				    -ms-box-sizing: content-box;
+				        box-sizing: content-box;
+			}
+		}
+
+</style>
+
+</head>
+<body>
+
+<div data-role="page" id="homepage" data-theme="a">
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+<div class="gcse-searchbox" ></div>
+
+<div class="gcse-searchresults"></div>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+
+
+
+<h1 style="text-align: center; font-family: serif;"><strong>UTM HomePage </strong></h1>
+<br/>
+
+<h3><strong>What do you want to see?</strong></h3>
+<br/>
+
+<a href="#courses" class="ui-btn">Courses</a>
+<br/>
+
+<a href="#location" class="ui-btn">Location</a>
+<br/>
+
+<a href="#news" class="ui-btn">Latest at UTM</a>
+<br/>
+<br/>
+
+ <div class="wrapper">
+<h2>News Items</h2>
+<div class="demo1 demof">
+<ul>
+<li><p>UTM in eLearning Africa Newsletter-October 2019</p><a href="http://www.utm.ac.mu/files/sthug/elearning_africa/poster_elearning_2019_dn17102019.pdf">Please click here for more info</a>
+
+</li>
+<li class="odd"><p>Attendance Policy & Extension of General Fees Deadline</p><a href="http://www.utm.ac.mu/files/sthug/attendance_policy/Attendance_Policy__Extension_of_Fees_Deadline.pdf">Please click here for more info</a>
+
+</li>
+<li class="odd"><p>Press Notice</p><a href="http://www.utm.ac.mu/files/sthug/PRESS%20NOTICE%202019/Press_Notice_23JULY_2019_-_JOINT_PROGRAMME_MURDOCH_UNI_compressed.pdf">Please click here for more info</a>
+
+</li>
+<li class="odd"><p>Notice: Free Education in TEI</p><a href="http://www.utm.ac.mu/files/sthug/notice/Notice_Free_Education_16_01_19.pdf">Please click here for more info</a>
+
+</li>
+<li><p>Notice to Postgraduate students</p><a href="http://www.utm.ac.mu/files/sthug/notice/Notice_to_students_090119.pdf">Please click here for more info</a>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div data-role="page" id="location" data-theme="a">
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+<div class="gcse-searchbox" ></div>
+
+<div class="gcse-searchresults"></div>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <script type="text/javascript" src="swiper.min.js"></script>
+   <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <br/>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;"><strong>Location </strong></h1>
+<br/>
+<br/>
+<br/>
+<center>
+		<div class="uk-container uk-margin-top">
+  <div class="uk-grid">
+    <div class="uk-width-1-1">
+      <div class="uk-panel uk-panel-box uk-panel-box-secondary uk-panel-header">
+        <h3 class="uk-panel-title">UTM Location</h3>
+		
+        <div id="map">
+		
+		</div>
+		
+       
+        <button id="locate-position" class="uk-button uk-button-success" style="width:15px;"><i class="uk-icon-map-marker"></i></button>
+		
+        
+		 
+       
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+
+
+</div>
+
+
+
+<script type="text/javascript">
+    if (navigator.geolocation == undefined) {
+      alert("Geolocation undefined");
+    } else {
+      alert("Geolocation Available");
+
+      //missing code 1: call to getCurrentPosition function
+
+      navigator.geolocation.getCurrentPosition(userLocated, locationError);
+      //missing code 2: define function userLocated
+      function userLocated(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        //alert("Lat:" + latitude + ", Long:" + longitude);
+
+        var mymap = L.map('mapid').setView([latitude, longitude], 16);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+          maxZoom: 19,
+          attribution: 'Map data &copy;' +
+            '<a href="https://www.openstreetmap.org/">OpenStreetMap</a>' +
+            'contributors,<a href="https://creativecommons.org/licenses' +
+            '/by-sa/2.0/">CC-BY-SA</a>,Imagery © <a href="https://' +
+            'www.mapbox.com/">Mapbox</a>',
+          id: 'mapbox.streets',
+          accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYyc' +
+            'XBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+        }).addTo(mymap);
+        var marker = L.marker([-20.177102,57.4673223]).addTo(mymap);
+
+        marker.bindPopup("UTM Campus").openPopup();
+
+        var circle = L.circle([-20.177102,57.4673223], {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 100
+      }).addTo(mymap);
+      circle.bindPopup("You may find the treasure around here");
+      var searchControl = L.esri.Geocoding.geosearch().addTo(mymap);
+      var results = new L.LayerGroup().addTo(mymap);
+      searchControl.on('results', function(data) {
+        results.clearLayers();
+        for (var i = data.results.length - 1; i >= 0; i--) {
+          results.addLayer(L.marker(data.results[i].latlng));
+        }
+      });
+
+      var geocodeService = L.esri.Geocoding.geocodeService();
+      mymap.on('click', function(e) {
+        geocodeService.reverse().latlng(e.latlng).run(function(error, result) {
+          if (error) {
+            return;
+          }
+          var popLocation = e.latlng;
+          var popup = L.popup()
+            .setLatLng(popLocation)
+            .setContent(result.address.Match_addr)
+            .openOn(mymap);
+        });
+      });
+    }
+
+    function locationError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          alert("Permission Denied- " + error.message);
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert("Position Not Available- " + error.message);
+          break;
+        case error.TIMEOUT:
+          alert("Request Time out- " + error.message);
+          break;
+      }
+    }
+  }
+</script>
+
+
+
+
+</div>
+
+
+
+<div data-role="page" id="API" data-theme="a">
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+<div class="gcse-searchbox" ></div>
+
+<div class="gcse-searchresults"></div>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<div>
+<h1 style="text-align: center; font-family: serif;"><strong>Students Corner </strong></h1>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="notouch">
+<div class="wrapper1">
+<section id="demo">
+	    <div class="vertical-align">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-6 col-sm-offset-3 col-xs-offset-0">
+	                    <div class="card no-border">
+	                        <div id="chat" class="conv-form-wrapper">
+	                            <form action="" method="GET" class="hidden">
+	                                <select data-conv-question="Hello! I'm a bot created from a HTML form. Can I show you some features? (this question comes from a select)" name="first-question">
+	                                    <option value="yes">Yes</option>
+	                                    <option value="sure">Sure!</option>
+	                                </select>
+	                                <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
+	                                <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you. (note that this question doesn't expect any answer)" data-no-answer="true">
+	                                <input type="text" data-conv-question="This plugin supports multi-select too. Let's see an example." data-no-answer="true">
+	                                <select name="multi[]" data-conv-question="What kind of music do you like?" multiple>
+	                                    <option value="Rock">Rock</option>
+	                                    <option value="Pop">Pop</option>
+	                                    <option value="Country">Country</option>
+	                                    <option value="Classic">Classic</option>
+	                                </select>
+	                                <select name="programmer" data-callback="storeState" data-conv-question="So, are you a programmer? (this question will fork the conversation based on your answer)">
+	                                    <option value="yes">Yes</option>
+	                                    <option value="no">No</option>
+	                                </select>
+	                                <div data-conv-fork="programmer">
+	                                    <div data-conv-case="yes">
+	                                        <input type="text" data-conv-question="A fellow programmer! Cool." data-no-answer="true">
+	                                    </div>
+	                                    <div data-conv-case="no">
+		                                    <select name="thought" data-conv-question="Have you ever thought about learning? Programming is fun!">
+		                                    	<option value="yes">Yes</option>
+		                                    	<option value="no">No..</option>
+		                                    </select>
+	                                    </div>
+	                                </div>
+	                                <input type="text" data-conv-question="convForm also supports regex patterns. Look:" data-no-answer="true">
+	                                <input data-conv-question="Type in your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
+	                                <input data-conv-question="Now tell me a secret (like a password)" type="password" data-minlength="6" id="senha" name="password" required placeholder="password">
+									<select data-conv-question="Selects also support callback functions. For example, try one of these:">
+											<option value="google" data-callback="google">Google</option>
+											<option value="bing" data-callback="bing">Bing</option>
+									</select>
+	                                <select name="callbackTest" data-conv-question="You can do some cool things with callback functions. Want to rollback to the 'programmer' question before?">
+	                                    <option value="yes" data-callback="rollback">Yes</option>
+	                                    <option value="no" data-callback="restore">No</option>
+	                                </select>
+	                                <select data-conv-question="This is it! If you like me, consider donating! If you need support, contact me. When the form gets to the end, the plugin submits it normally, like you had filled it." id="">
+	                                    <option value="">Awesome!</option>
+	                                </select>
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<div data-role="page" id="news" data-theme="a">
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+<div class="gcse-searchbox" ></div>
+
+<div class="gcse-searchresults"></div>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;"><strong>News and Events </strong></h1>
+<br/>
+
+
+<div class="demo1 demof">
+<ul>
+<li><p>UTM in eLearning Africa Newsletter-October 2019</p><a href="http://www.utm.ac.mu/files/sthug/elearning_africa/poster_elearning_2019_dn17102019.pdf">Please click here for more info</a>
+
+</li>
+<li class="odd"><p>Attendance Policy & Extension of General Fees Deadline</p><a href="http://www.utm.ac.mu/files/sthug/attendance_policy/Attendance_Policy__Extension_of_Fees_Deadline.pdf">Please click here for more info</a>
+
+</li>
+<li class="odd"><p>Press Notice</p><a href="http://www.utm.ac.mu/files/sthug/PRESS%20NOTICE%202019/Press_Notice_23JULY_2019_-_JOINT_PROGRAMME_MURDOCH_UNI_compressed.pdf">Please click here for more info</a>
+
+</li>
+<li class="odd"><p>Notice: Free Education in TEI</p><a href="http://www.utm.ac.mu/files/sthug/notice/Notice_Free_Education_16_01_19.pdf">Please click here for more info</a>
+
+</li>
+<li><p>Notice to Postgraduate students</p><a href="http://www.utm.ac.mu/files/sthug/notice/Notice_to_students_090119.pdf">Please click here for more info</a>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+
+
+
+ <div data-role="page" id="courses" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+<div class="gcse-searchbox" ></div>
+
+<div class="gcse-searchresults"></div>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<marquee><h1 style="text-align: center; font-family: serif;">Courses </h1></marquee>
+
+<h2>Choose Type of Programme</h2>
+<br/>
+
+
+				<div data-role="collapsible" data-insert="false">
+					<h2>Undergraduate Programmes</h2>
+					<ul data-role="listview">
+						<li><a href="#usite">SITE</a></li>
+						<li><a href="#ushs">SHS</a></li>
+						<li><a href="#usbmf">SBMF</a></li>
+						<li><a href="#ussdt">SSDT</a></li>						
+					</ul>
+				</div>
+				
+				<br/>
+				
+				<div data-role="collapsible" data-insert="false">
+					<h2>Postgraduate Programmes</h2>
+					<ul data-role="listview">
+						<li><a href="#psite">SITE</a></li>
+						<li><a href="#pshs">SHS</a></li>
+						<li><a href="#psbmf">SBMF</a></li>
+						<li><a href="#pssdt">SSDT</a></li>						
+					</ul>
+				</div>
+				
+				<br/>
+				
+			
+</div>
+        </div>
+		
+		
+		
+		
+
+
+		<div data-role="page" id="usite" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Undergraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SITE</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">Graphic Design</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">Computer Science with Netwotk Security</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">Telecommunication Engineering</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">Telecommunicaion v1.1</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">Software Engineering</a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+</div>
+ 
+
+
+<div data-role="page" id="ushs" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Undergraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SHS</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc. (Hons) Environmental and Public Health   </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Gerontology </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">Diploma in  Bioanalytical Laboratory Technology </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Accounting with Finance</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Financial Services with Law </a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+        </div>
+
+       
+
+<div data-role="page" id="usbmf" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Undergraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SBMF</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Financial Risk Management  </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Financial Management with specialization in Public Finance </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Accounting with Finance </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) in Banking and International Finance </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Economics with International Business and Finance  </a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+        </div>	   
+ 
+ 
+ <div data-role="page" id="ussdt" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Undergraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SSDT</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BA (Hons) Communication </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc. (Hons) Occupational Safety & Health Management Programme</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Services Management and Marketing </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons) Tourism and Hospitality Management</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">BSc (Hons.) Applied Social Science  with Specialisation in Divinity</a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+        </div>
+		
+		
+		
+		
+		
+		
+		
+		<div data-role="page" id="psite" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Postgraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SITE</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Applied Statistics with Operational Research</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Software Engineering</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc (Eng) Telecommunications Engineering</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Computational Science and Engineering</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Mobile Communications and Computing</a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+
+        </div>
+		
+		
+		
+		
+		
+		<div data-role="page" id="pshs" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Postgraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SHS</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Mental Health</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Health Services Management</a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+
+        </div>
+		
+		
+		
+		
+		
+		
+		<div data-role="page" id="psbmf" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Postgraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SBMF</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MBA - Financial Risk Management</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MBA - Finance and Investment </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc International Business and Economics</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MBA - General</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Managerial Psychology</a></h3></li>
+<br/>
+</ul>
+
+
+</div> 
+        </div>
+		
+		
+		
+		
+				<div data-role="page" id="pssdt" data-theme="a">
+	 
+       <div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<h1 style="text-align: center; font-family: serif;">Postgraduate Programmes</h1>
+<h1 style="text-align: center; font-family: serif;">SSDT</h1>
+<br/>
+<br/>
+<br/>
+
+
+<ul datarole="listview">
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Climate Change, Health and Disaster Management  </a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc Hotel Management	</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MSc International Tourism Management</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MA Gender and Women Studies</a></h3></li>
+<br/>
+<li><h3><a href="http://www.utm.ac.mu/files/sthug/programmes/site/UG2019/BCNSv5_0.pdf">MA in Counselling</a></h3></li>
+<br/>
+</ul>
+
+
+</div>
+   </div>
+
+
+<div data-role="page" id="sign-in" data-theme="a">
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<section id="contact">
+<div class="contact-page">
+<div class="container">
+<div class="center">
+<h2>Sign In</h2>
+</div>
+<div class="row contact-wrap">
+<div class="col-md-8 col-md-offset-2">
+
+<form action="" method="post" role="form" class="contactForm">
+
+<div class="form-group">
+<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"data-msg="Please enter a valid email" />
+<div class="validation"></div>
+</div>
+
+<div class="form-group">
+<input type="password" class="form-control" name="password" id="password" placeholder="Your Password" data-rule="password" data-msg="Password incorrect!"
+<div class="validation"></div>
+</div>
+
+<div class="text-center"><p hidden>dshbfdbhvbefjhvbvjbefjvnwfejkvnjknfkvnfjkvnfvjnfrvkn</p></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="btncenter">
+<a href="#" class="btn btn-primary btn-lg" type="submit">Sign In</a>
+<br/>
+<br/>
+
+<h4>Not Registered Yet</h4>
+<a href="#register">Register Now</a>
+</div>
+
+</form>
+</div>
+</div>
+<!--/.row-->
+</div>
+<!--/.container-->
+</div>
+<!--/#contact-page-->
+</section>
+
+
+</div>
+</div>
+
+
+
+<div data-role="page" id="register" data-theme="a">
+
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/back.jpg)";>
+<section id="contact">
+<div class="contact-page">
+<div class="container">
+<div class="center">
+<h2>Register Here</h2>
+</div>
+<div class="row contact-wrap">
+<div class="col-md-8 col-md-offset-2">
+
+<form action="" method="post" role="form" class="contactForm">
+
+<div class="form-group">
+<input type="fname" class="form-control" name="fname" id="fname" placeholder="Your First Name" data-rule="name"data-msg="Please enter your first name" />
+<div class="validation"></div>
+</div>
+
+<div class="form-group">
+<input type="lname" class="form-control" name="lname" id="lname" placeholder="Your last name" data-rule="name"data-msg="Please enter ypur last name" />
+<div class="validation"></div>
+</div>
+
+<div class="form-group">
+<input type="cohort" class="form-control" name="cohort" id="cohort" placeholder="Your Cohort" data-rule="cohort"data-msg="Please enter your cohort" />
+<div class="validation"></div>
+</div>
+
+<div class="form-group">
+<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"data-msg="Please enter a valid email" />
+<div class="validation"></div>
+</div>
+
+<div class="form-group">
+<input type="password" class="form-control" name="password" id="password" placeholder="Your Password" data-rule="password" data-msg="Create a password!">
+<div class="validation"></div>
+</div>
+
+<div class="text-center"><p hidden>dshbfdbhvbefjhvbvjbefjvnwfejkvnjknfkvnfjkvnfvjnfrvkn</p></div>
+
+<br/>
+<div class="btncenter">
+<a href="#" class="btn btn-primary btn-lg" type="submit">Register</a>
+<br/>
+<br/>
+<p>Already have an account?</p>
+<a href="#sign-in">Click Here</a>
+</div>
+
+</form>
+</div>
+</div>
+<!--/.row-->
+</div>
+<!--/.container-->
+</div>
+<!--/#contact-page-->
+</section>
+
+
+
+</div>
+</div>
+
+
+<div data-role="page" id="contact-us" data-theme="a">
+
+<div data-role="page-one" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+<div data-role="header">
+
+<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+<h3>UTM WEBSITE</h3>
+
+</div><!-- /header -->
+
+<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li><a href="#homepage">Home</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#API">API</a></li>
+<li><a href="#sign-in">Sign In</a></li>
+<li><a href="#contact-us">Contact Us</a></li>
+<li><a href="#courses">Courses</a></li>
+</ul>
+</div><!-- /panel -->
+
+</div>
+
+
+
+<div data-role="main" class="ui-content" style="background-image: url(img/water.jpg)";>
+<section id="contact">
+<div class="contact-page">
+<div class="container">
+<div class="center">
+<h2>Contact Us</h2>
+</div>
+<div class="row contact-wrap">
+<div class="col-md-8 col-md-offset-2">
+
+<form action="config.php" method="post" role="form" class="contactForm" >
+<div class="form-group">
+<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+data-msg="Please enter at least 4 chars" />
+<div class="validation"></div>
+</div>
+<div class="form-group">
+<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
+data-msg="Please enter a valid email" />
+<div class="validation"></div>
+</div>
+<div class="form-group">
+<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4"
+data-msg="Please enter at least 8 chars of subject" />
+<div class="validation"></div>
+</div>
+<div class="form-group">
+<textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us"
+placeholder="Message"></textarea>
+<div class="validation"></div>
+</div>
+
+<div class="text-center"><button type="submit" class="btn btn-primary btn-lg">Send Message</button></div>
+</form>
+</div>
+</div>
+<!--/.row-->
+</div>
+<!--/.container-->
+</div>
+<!--/#contact-page-->
+</section>
+
+
+
+</div>
+<div data-role="main" class="ui-content">
+
+<div id="output"><ul data-role="listview" id="resultList"></ul></div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(function(){
+	$('.demo1').easyTicker({
+		direction: 'up',
+		easing: 'swing'
+	});
+	
+	
+	
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="dist/autosize.min.js"></script>
+	<script type="text/javascript" src="dist/jquery.convform.js"></script>
+
+	<script>
+		function google(stateWrapper, ready) {
+			window.open("https://google.com");
+			ready();
+		}
+		function bing(stateWrapper, ready) {
+			window.open("https://bing.com");
+			ready();
+		}
+		var rollbackTo = false;
+		var originalState = false;
+		function storeState(stateWrapper, ready) {
+			rollbackTo = stateWrapper.current;
+			console.log("storeState called: ",rollbackTo);
+			ready();
+		}
+		function rollback(stateWrapper, ready) {
+			console.log("rollback called: ", rollbackTo, originalState);
+			console.log("answers at the time of user input: ", stateWrapper.answers);
+			if(rollbackTo!=false) {
+				if(originalState==false) {
+					originalState = stateWrapper.current.next;
+						console.log('stored original state');
+				}
+				stateWrapper.current.next = rollbackTo;
+				console.log('changed current.next to rollbackTo');
+			}
+			ready();
+		}
+		function restore(stateWrapper, ready) {
+			if(originalState != false) {
+				stateWrapper.current.next = originalState;
+				console.log('changed current.next to originalState');
+			}
+			ready();
+		}
+	</script>
+	<script>
+		jQuery(function($){
+			convForm = $('#chat').convform({selectInputStyle: 'disable'});
+			console.log(convForm);
+		});
+	</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
